@@ -1,0 +1,49 @@
+.footer {
+  padding: 2rem 0;
+  background-color: $trietiary-color;
+
+  &__input-wrapper {
+    padding: 1rem;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  &__input {
+    padding: 0 1rem;
+    border: 0;
+    border-radius: $default-border-radius;
+  }
+
+  .links {
+    margin: auto;
+    max-width: 75%;
+    display: flex;
+    justify-content: space-between;
+    .links-col {
+      &__list {
+        list-style: none;
+        padding: 0;
+      }
+
+      &__item {
+        padding: 0.25rem 0;
+      }
+
+      &__link {
+        color: $primary-color-tint;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .attribution {
+    max-width: 75%;
+    margin: auto;
+    color: $primary-color-tint;
+    &__author {
+      text-decoration: none;
+      color: $primary-color;
+      font-weight: $font-medium;
+    }
+  }
+}

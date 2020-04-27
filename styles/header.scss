@@ -1,0 +1,64 @@
+.hero {
+  background: url("../images/bg-tablet-pattern.svg");
+  background-repeat: no-repeat;
+  background-size: 125%;
+  background-position: 50px -125px;
+
+  &__illustration {
+    max-width: 100%;
+    margin: 2rem 0 0 0;
+  }
+
+  &__content {
+    background: url("../images/bg-tablet-pattern.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 250px 50px;
+    padding: 0 0 5rem 0;
+  }
+
+  &__title {
+    margin: 1rem 2rem;
+    color: $primary-color-dark;
+    font-weight: $font-bold;
+    text-align: center;
+    font-size: 2.35rem;
+    line-height: 1.2;
+  }
+
+  &__subtitle {
+    margin: 1rem auto;
+    max-width: 75%;
+    text-align: center;
+    font-size: 2rem;
+    display: block;
+    color: $primary-color-dark;
+    font-weight: $font-bold;
+  }
+
+  &__description {
+    margin: 0 2rem;
+    color: $text-color;
+    line-height: 1.75;
+
+    &--centered {
+      text-align: center;
+    }
+  }
+
+  &__button {
+    display: block;
+    border: 0;
+    color: #fff;
+    background: $primary-color;
+    font-size: 0.9rem;
+    font-weight: $font-bold;
+    border-radius: 50px;
+    margin: 2rem auto;
+    padding: 0.75rem 2rem;
+  }
+
+  &__functionality {
+    margin: 0 0 5rem 0;
+  }
+}

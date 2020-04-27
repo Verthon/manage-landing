@@ -1,0 +1,27 @@
+.navigation {
+  font-family: $main-font;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 1rem 0 1rem;
+
+  &__logo {
+    width: 120px;
+  }
+
+  &__button {
+    border: 0;
+    width: 25px;
+    background: transparent;
+    padding: 0;
+    .line {
+      border-bottom: 4px solid $primary-color-dark;
+      display: flex;
+      margin: 0.25rem 0;
+    }
+  }
+
+  &__list {
+    display: none;
+  }
+}
