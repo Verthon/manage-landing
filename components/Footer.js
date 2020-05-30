@@ -1,7 +1,10 @@
-export default function Footer({ primary_links, secondary_links }) {
+import React from 'react'
+import PropTypes from 'prop-types'
+
+export default function Footer ({ primaryLinks, secondaryLinks }) {
   const handleSubmit = (event) => {
-    event.preventDefault();
-  };
+    event.preventDefault()
+  }
 
   const renderLinks = (links) => {
     if (links.length > 0) {
@@ -11,9 +14,9 @@ export default function Footer({ primary_links, secondary_links }) {
             {item}
           </a>
         </li>
-      ));
+      ))
     }
-  };
+  }
   return (
     <footer className="footer">
       <form className="footer__input-wrapper" onClick={(e) => handleSubmit(e)}>
@@ -26,17 +29,45 @@ export default function Footer({ primary_links, secondary_links }) {
       </form>
       <div className="links">
         <div className="links-col">
-          <ul className="links-col__list">{renderLinks(primary_links)}</ul>
+          <ul className="links-col__list">{renderLinks(primaryLinks)}</ul>
         </div>
         <div className="links-col">
-          <ul className="links-col__list">{renderLinks(secondary_links)}</ul>
+          <ul className="links-col__list">{renderLinks(secondaryLinks)}</ul>
         </div>
       </div>
 
-      <svg src="/logo.svg" />
+      <div className="socials">
+        <img
+          src="/icons/icon-facebook.svg"
+          alt="facebook icon"
+          className="socials__item"
+        />
+        <img
+          src="/icons/icon-youtube.svg"
+          alt="youtube"
+          className="socials__item"
+        />
+        <img
+          src="/icons/icon-twitter.svg"
+          alt="twitter"
+          className="socials__item"
+        />
+        <img
+          src="/icons/icon-pinterest.svg"
+          alt="pinterest"
+          className="socials__item"
+        />
+        <img
+          src="/icons/icon-instagram.svg"
+          alt="instagram"
+          className="socials__item"
+        />
+      </div>
+
+      <img className="footer__logo" src="/logo-white.svg" />
 
       <div className="attribution">
-        Challenge by{" "}
+        Challenge by{' '}
         <a
           className="attribution__author"
           href="https://www.frontendmentor.io?ref=challenge"
@@ -45,7 +76,7 @@ export default function Footer({ primary_links, secondary_links }) {
         >
           Frontend Mentor
         </a>
-        . Coded by{" "}
+        . Coded by{' '}
         <a
           className="attribution__author"
           href="https://sordyl.me"
@@ -57,5 +88,10 @@ export default function Footer({ primary_links, secondary_links }) {
         .
       </div>
     </footer>
-  );
+  )
+}
+
+Footer.propTypes = {
+  primaryLinks: PropTypes.arrayOf(PropTypes.string),
+  secondaryLinks: PropTypes.arrayOf(PropTypes.string)
 }

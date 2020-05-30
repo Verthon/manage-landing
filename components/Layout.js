@@ -1,6 +1,8 @@
-import Head from "next/head";
-import Header from "../components/Header";
-import Navigation from "../components/Navigation";
+import React from 'react'
+import PropTypes from 'prop-types'
+import Head from 'next/head'
+import Header from '../components/Header'
+import Navigation from '../components/Navigation'
 
 export default function Layout({ children, links }) {
   return (
@@ -14,10 +16,15 @@ export default function Layout({ children, links }) {
         />
       </Head>
       <Header>
-        <Navigation links={links}/>
+        <Navigation links={links} />
       </Header>
-      
+
       <main>{children}</main>
     </>
-  );
+  )
+}
+
+Layout.propTypes = {
+  children: PropTypes.node,
+  links: PropTypes.arrayOf(PropTypes.string)
 }

@@ -1,9 +1,9 @@
 .footer {
-  padding: 2rem 0;
-  background-color: $trietiary-color;
+  padding: 2rem 1rem;
+  background-color: $color-tertiary;
 
   &__input-wrapper {
-    padding: 1rem;
+    padding: 1rem 0;
     display: flex;
     justify-content: space-around;
   }
@@ -45,5 +45,21 @@
       color: $primary-color;
       font-weight: $font-medium;
     }
+  }
+
+  &__logo {
+    display: block;
+    margin: 3rem auto 2rem auto;
+  }
+}
+
+.socials {
+  margin: 2rem 0;
+  display: flex;
+  justify-content: space-around;
+
+  &__item {
+    width: 30px;
+    height: 30px;
   }
 }

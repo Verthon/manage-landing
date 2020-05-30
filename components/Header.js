@@ -1,4 +1,7 @@
-export default function Header({ children }) {
+import React from 'react'
+import PropTypes from 'prop-types'
+
+export default function Header ({ children }) {
   return (
     <header className="hero">
       {children}
@@ -13,18 +16,24 @@ export default function Header({ children }) {
         </h1>
         <p className="hero__description">
           Manage makes it simple for software teams to plan day-to-day tasks
-          while keeping the larger team goals in view.{" "}
+          while keeping the larger team goals in view.{' '}
         </p>
-        <button type="button" className="hero__button">Get Started</button>
+        <button type="button" className="hero__button">
+          Get Started
+        </button>
       </article>
       <div className="hero__functionality">
-        <h2 className="hero__subtitle">What's different about Manage?</h2>
+        <h2 className="hero__subtitle">What&apos;s different about Manage?</h2>
         <div className="hero__description hero__description--centered">
           Manage provides all the functionality your team needs, without the
           complexity. Our software is tailor-made for modern digital product
-          teams.{" "}
+          teams.{' '}
         </div>
       </div>
     </header>
-  );
+  )
+}
+
+Header.propTypes = {
+  children: PropTypes.node
 }
