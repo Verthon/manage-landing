@@ -1,3 +1,11 @@
+$color-primary: hsl(12, 88%, 59%);
+$color-primary-200: hsl(13, 100%, 96%);
+$color-secondary: hsl(227, 12%, 61%);
+$color-tertiary: hsl(233, 12%, 13%);
+$color-dark: hsl(228, 39%, 23%);
+$color-text: hsl(233, 12%, 37%);
+$color-white: hsl(0,0%,100%);
+
 $primary-color: hsl(12, 88%, 59%);
 $primary-color-tint: hsl(13, 100%, 96%);
 $primary-color-dark: hsl(228, 39%, 23%);
@@ -10,3 +18,4 @@ $font-medium: 500;
 $font-bold: 700;
 
 $default-border-radius: 25px;
+$default-shadow: 0 3px 10px rgba(242, 95, 58, 0.51);

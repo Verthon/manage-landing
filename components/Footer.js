@@ -1,9 +1,13 @@
 export default function Footer({ primary_links, secondary_links }) {
+  const handleSubmit = (event) => {
+    event.preventDefault();
+  };
+
   const renderLinks = (links) => {
     if (links.length > 0) {
-      return links.map((item) => (
-        <li className="links-col__item">
-          <a href="#" className="links-col__link">
+      return links.map((item, index) => (
+        <li key={index} className="links-col__item">
+          <a key={index} href="#" className="links-col__link">
             {item}
           </a>
         </li>
@@ -12,7 +16,7 @@ export default function Footer({ primary_links, secondary_links }) {
   };
   return (
     <footer className="footer">
-      <form className="footer__input-wrapper">
+      <form className="footer__input-wrapper" onClick={(e) => handleSubmit(e)}>
         <input
           className="footer__input"
           type="email"
@@ -33,10 +37,24 @@ export default function Footer({ primary_links, secondary_links }) {
 
       <div className="attribution">
         Challenge by{" "}
-        <a className="attribution__author" href="https://www.frontendmentor.io?ref=challenge" target="_blank" rel="noopener noreferrer">
+        <a
+          className="attribution__author"
+          href="https://www.frontendmentor.io?ref=challenge"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           Frontend Mentor
         </a>
-        . Coded by <a className="attribution__author" href="https://sordyl.me" target="_blank" rel="noopener noreferrer">Krzysztof Sordyl</a>.
+        . Coded by{" "}
+        <a
+          className="attribution__author"
+          href="https://sordyl.me"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Krzysztof Sordyl
+        </a>
+        .
       </div>
     </footer>
   );

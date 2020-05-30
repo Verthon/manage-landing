@@ -18,7 +18,7 @@ const features = [
     number: "02",
     title: "Advanced build-in reports",
     description:
-      "Set internal delivery estimates and track progress toward company goals. Our customisable dashboard helps you build out the reports you need to keep key stakeholders informed.",
+      "Set internal delivery estimates and track progress toward company goals. Our customizable dashboard helps you build out the reports you need to keep key stakeholders informed.",
   },
   {
     number: "03",
@@ -29,9 +29,15 @@ const features = [
 ];
 
 const renderFeatures = () => {
-  console.log('render features', features)
-  return features.map((feature) => (<Feature key={feature.number} number={feature.number} title={feature.title} description={feature.description}/>))
-}
+  return features.map((feature) => (
+    <Feature
+      key={feature.number}
+      number={feature.number}
+      title={feature.title}
+      description={feature.description}
+    />
+  ));
+};
 
 export default function Home() {
   return (
