@@ -4,5 +4,36 @@
     font-weight: $font-bold;
     text-align: center;
     font-size: 2rem;
+    margin: 3rem 0;
+  }
+}
+
+.testimonial {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding: 2.5rem 0 1rem 0;
+  margin: 1rem 0 0 0;
+  &__container {
+    background-color: $color-gray-100;
+    padding: 1rem 3rem;
+  }
+
+  &__avatar {
+    top: 0;
+    width: 80px;
+    position: absolute;
+    display: block;
+    margin: auto;
+  }
+  &__name {
+    color: $color-dark;
+    text-align: center;
+    font-size: 1.25rem;
+  }
+
+  &__text {
+    color: $color-text;
+    text-align: center;
   }
 }

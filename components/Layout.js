@@ -4,7 +4,7 @@ import Head from 'next/head'
 import Header from '../components/Header'
 import Navigation from '../components/Navigation'
 
-export default function Layout({ children, links }) {
+export default function Layout ({ children, links }) {
   return (
     <>
       <Head>

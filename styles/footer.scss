@@ -5,13 +5,14 @@
   &__input-wrapper {
     padding: 1rem 0;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
   }
 
   &__input {
     padding: 0 1rem;
     border: 0;
     border-radius: $default-border-radius;
+    margin: 0 1rem 0 0;
   }
 
   .links {

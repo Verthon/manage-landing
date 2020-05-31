@@ -1,9 +1,34 @@
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+
+  25% {
+    opacity: 0.5;
+  }
+
+  50% {
+    opacity: 75%;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
 .navigation {
   font-family: $main-font;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
   padding: 2rem 1rem 0 1rem;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
 
   &__logo {
     width: 120px;
@@ -19,9 +44,37 @@
       display: flex;
       margin: 0.25rem 0;
     }
+
+    &--animated {
+      animation: fadein 1s ease-out;
+    }
   }
 
   &__list {
     display: none;
+
+    &--active {
+      display: flex;
+      flex-direction: column;
+      list-style: none;
+      background-color: $color-white;
+      width: 100%;
+      align-items: center;
+      box-shadow: 0 50px 100px rgba(0,0,0,0.5);
+      padding: 2rem 0;
+      border-radius: 4px;
+      animation: fadein 1s ease-out;
+    }
+  }
+
+  &__item {
+    margin: 0.75rem 0;
+  }
+
+  &__link {
+    color: $color-dark;
+    text-decoration: none;
+    padding: 1rem 0;
+    font-weight: bold;
   }
 }
