@@ -76,5 +76,9 @@
     text-decoration: none;
     padding: 1rem 0;
     font-weight: bold;
+
+    &:hover {
+      color: $color-secondary;
+    }
   }
 }

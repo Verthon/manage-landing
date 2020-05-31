@@ -1,9 +1,23 @@
-import React from 'react'
+import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 
-export default function Footer ({ primaryLinks, secondaryLinks }) {
+export default function Footer({ primaryLinks, secondaryLinks }) {
+  const errorMessages = {
+    email: 'Please insert valid email',
+  }
+  const validateEmail = (email) => {
+    const regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+    return regex.test(String(email).toLowerCase())
+  }
+  const [error, setError] = useState({ isPresent: false, message: '' })
+  const [email, setEmail] = useState('')
   const handleSubmit = (event) => {
     event.preventDefault()
+    if (!validateEmail(email)) {
+      setError({ isPresent: true, message: errorMessages.email })
+      return
+    }
+    setError({ ...error, isPresent: false })
   }
 
   const renderLinks = (links) => {
@@ -24,9 +38,13 @@ export default function Footer ({ primaryLinks, secondaryLinks }) {
           className="footer__input"
           type="email"
           placeholder="Updates in your inbox..."
+          onChange={(e) => setEmail(e.target.value)}
         />
         <button className="btn">Go</button>
       </form>
+      {error.isPresent ? (
+        <div className="error-message">{error.message}</div>
+      ) : null}
       <div className="links">
         <div className="links-col">
           <ul className="links-col__list">{renderLinks(primaryLinks)}</ul>
@@ -93,5 +111,5 @@ export default function Footer ({ primaryLinks, secondaryLinks }) {
 
 Footer.propTypes = {
   primaryLinks: PropTypes.arrayOf(PropTypes.string),
-  secondaryLinks: PropTypes.arrayOf(PropTypes.string)
+  secondaryLinks: PropTypes.arrayOf(PropTypes.string),
 }
