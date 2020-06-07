@@ -3,10 +3,14 @@
   background-repeat: no-repeat;
   background-size: 125%;
   background-position: 50px -125px;
+  @include mQ(map-get($breakpoints, xs)){
+    background-size: 100%;
+  }
 
   &__illustration {
     max-width: 100%;
-    margin: 2rem 0 0 0;
+    margin: 2rem auto 0 auto;
+    display: block;
   }
 
   &__content {

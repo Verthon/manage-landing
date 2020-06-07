@@ -18,6 +18,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 - Next.js
 - React.js
 - Sass.js
+- [BrainhubEu Carousel](https://brainhubeu.github.io/react-carousel/)
 
 ## Deploy on ZEIT Now
 

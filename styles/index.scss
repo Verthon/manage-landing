@@ -1,5 +1,6 @@
 @import "./normalize.scss";
 @import "./variables.scss";
+@import "./mixins.scss";
 @import "./header.scss";
 @import "./navigation.scss";
 @import "./feature.scss";
@@ -12,7 +13,8 @@ body {
 }
 
 .container {
-  
+  margin: auto;
+  max-width: 90%;
 }
 
 .btn {
