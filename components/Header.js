@@ -11,7 +11,7 @@ export default function Header ({ children }) {
         alt=""
       />
       <article className="hero__content">
-        <h1 className="hero__title">
+        <h1 className="hero__title bg-gray-200">
           Bring everyone together to build better products
         </h1>
         <p className="hero__description">

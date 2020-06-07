@@ -43,7 +43,7 @@ export default function Footer({ primaryLinks, secondaryLinks }) {
         <button className="btn">Go</button>
       </form>
       {error.isPresent ? (
-        <div className="error-message">{error.message}</div>
+        <div className="error-message animate__animated animate__pulse">{error.message}</div>
       ) : null}
       <div className="links">
         <div className="links-col">

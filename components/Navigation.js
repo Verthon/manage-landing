@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 
-export default function Navigation({ links }) {
+export default function Navigation ({ links }) {
   const [isNavOpen, setIsNavOpen] = useState(false)
   const toggleMobileNavigation = () => {
     setIsNavOpen(!isNavOpen)
@@ -45,7 +45,11 @@ export default function Navigation({ links }) {
         )}
       </div>
       <ul
-        className={isNavOpen ? 'navigation__list--active' : 'navigation__list'}
+        className={
+          isNavOpen
+            ? 'navigation__list--active animate__slideInDown'
+            : 'navigation__list'
+        }
       >
         {renderNavigationItems()}
       </ul>
@@ -54,5 +58,5 @@ export default function Navigation({ links }) {
 }
 
 Navigation.propTypes = {
-  links: PropTypes.arrayOf(PropTypes.string),
+  links: PropTypes.arrayOf(PropTypes.string)
 }
