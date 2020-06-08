@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-export default function Testimonial({ image, name, text }) {
+export default function Testimonial ({ image, name, text }) {
   return (
     <div className="testimonial">
       <img className="testimonial__avatar" src={image} alt={`${name} photo`} />
@@ -16,5 +16,5 @@ export default function Testimonial({ image, name, text }) {
 Testimonial.propTypes = {
   image: PropTypes.string,
   name: PropTypes.string,
-  text: PropTypes.string,
+  text: PropTypes.string
 }

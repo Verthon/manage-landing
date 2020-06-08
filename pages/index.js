@@ -70,7 +70,19 @@ const renderFeatures = () => {
 export default function Home () {
   return (
     <Layout links={menuLinks}>
-      {renderFeatures()}
+      <div className="features container">
+        <div className="features__functionality">
+          <h2 className="features__subtitle">
+            What&apos;s different about Manage?
+          </h2>
+          <div className="features__description">
+            Manage provides all the functionality your team needs, without the
+            complexity. Our software is tailor-made for modern digital product
+            teams.{' '}
+          </div>
+        </div>
+        <div className="container">{renderFeatures()}</div>
+      </div>
       <Testimonials testimonials={testimonials} />
       <GetStarted />
       <Footer primaryLinks={primaryLinks} secondaryLinks={secondaryLinks} />

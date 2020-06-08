@@ -19,7 +19,7 @@ export default function Navigation ({ links }) {
     }
   }
   return (
-    <nav className="navigation">
+    <nav className="navigation container">
       <div className="navigation__container">
         <img className="navigation__logo" src="/logo.svg" alt="" />
         {isNavOpen ? (

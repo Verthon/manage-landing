@@ -19,7 +19,7 @@ export default function Layout ({ children, links }) {
         <Navigation links={links} />
       </Header>
 
-      <main>{children}</main>
+      <main className='main-content'>{children}</main>
     </>
   )
 }

@@ -17,8 +17,10 @@ body {
 }
 
 .container {
-  margin: auto;
-  max-width: 90%;
+  margin: 0 auto;
+  @include mQ(map-get($breakpoints, xs)){
+    max-width: 80%;
+  }
 }
 
 .error-message {
@@ -56,11 +58,31 @@ body {
 
 .get-started {
   background: linear-gradient( $primary-color 100%, rgba(0, 0, 0, 0.5)100%), url('/backgrounds/bg-tablet-pattern.svg');
+  @include mQ(map-get($breakpoints, xs)) {
+    display: flex;
+    align-items: center;
+  }
   padding: 2rem;
   &__title {
     font-size: 2.35rem;
     text-align: center;
     font-weight: $font-bold;
     color: #ffffff;
+    @include mQ(map-get($breakpoints, xs)){
+      max-width: 70%;
+      text-align: left;
+      margin: 1rem auto;
+    }
+  }
+}
+
+.main-content {
+  margin: 2rem 0 0 0;
+  @include mQ(map-get($breakpoints, lg)) {
+    margin: 10rem 0 0 0;
+  }
+
+  @include mQ(map-get($breakpoints, xl)) {
+    margin: 20rem 0 0 0;
   }
 }

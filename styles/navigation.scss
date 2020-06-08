@@ -22,6 +22,12 @@
   flex-direction: column;
   align-items: center;
   padding: 2rem 1rem 0 1rem;
+  width: auto;
+
+  @include mQ(map-get($breakpoints, md)) {
+    width: 100%;
+    flex-direction: row;
+  }
 
   &__container {
     display: flex;
@@ -39,10 +45,9 @@
     width: 25px;
     background: transparent;
     padding: 0;
-    .line {
-      border-bottom: 4px solid $primary-color-dark;
-      display: flex;
-      margin: 0.25rem 0;
+
+    @include mQ(map-get($breakpoints, md)) {
+      display: none;
     }
 
     &--animated {
@@ -52,11 +57,18 @@
 
   &__list {
     display: none;
+    list-style: none;
+
+    @include mQ(map-get($breakpoints, md)) {
+      display: flex;
+      width: 100%;
+      justify-content: space-around;
+    }
 
     &--active {
+      list-style: none;
       display: flex;
       flex-direction: column;
-      list-style: none;
       background-color: $color-white;
       width: 100%;
       align-items: center;
