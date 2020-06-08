@@ -84,7 +84,7 @@ export default function Footer({ primaryLinks, secondaryLinks }) {
 
       <img className="footer__logo" src="/logo-white.svg" />
 
-      <div className="attribution">
+      <p className="attribution">
         Challenge by{' '}
         <a
           className="attribution__author"
@@ -104,7 +104,7 @@ export default function Footer({ primaryLinks, secondaryLinks }) {
           Krzysztof Sordyl
         </a>
         .
-      </div>
+      </p>
     </footer>
   )
 }

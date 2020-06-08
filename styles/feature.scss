@@ -74,6 +74,11 @@
     background: $primary-color-tint;
     color: $primary-color-dark;
     padding: 0.5rem 0 0.5rem 2.5rem;
+
+    @include mQ(map-get($breakpoints, lg)) {
+      background: transparent;
+      font-size: 1.25rem;
+    }
   }
 
   &__number {
@@ -88,5 +93,9 @@
   &__description {
     margin: 0;
     color: $text-color;
+
+    @include mQ(map-get($breakpoints, lg)) {
+      max-width: 75%;
+    }
   }
 }

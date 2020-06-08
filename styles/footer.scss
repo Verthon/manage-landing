@@ -40,6 +40,7 @@
   .attribution {
     max-width: 75%;
     margin: auto;
+    text-align: center;
     color: $primary-color-tint;
     &__author {
       text-decoration: none;
@@ -58,6 +59,11 @@
   margin: 2rem 0;
   display: flex;
   justify-content: space-around;
+
+  @include mQ(map-get($breakpoints, lg)) {
+    margin: 2rem auto;
+    max-width: 75%;
+  }
 
   &__item {
     width: 30px;
