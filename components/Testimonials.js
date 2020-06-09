@@ -6,7 +6,7 @@ import Carousel, { Dots } from '@brainhubeu/react-carousel'
 export default function Testimonials ({ testimonials }) {
   const MAX_MOBILE_WIDTH = 1024
   let slidesPerPage = 1
-  const [dotValue, setDotValue] = useState(0)
+  const [dotValue, setDotValue] = useState(1)
   const [slides, setSlides] = useState([])
   if (typeof window !== 'undefined') {
     if (window.innerWidth >= MAX_MOBILE_WIDTH) {

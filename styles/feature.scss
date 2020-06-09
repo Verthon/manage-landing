@@ -34,12 +34,14 @@
       max-width: 70%;
     }
 
-    @include mQ(map-get($breakpoints, xl)) {
-    }
-
     &--centered {
       text-align: center;
     }
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
   }
 
   &__functionality {
@@ -96,6 +98,9 @@
 
     @include mQ(map-get($breakpoints, lg)) {
       max-width: 75%;
+    }
+    @include mQ(map-get($breakpoints, xl)) {
+      max-width: 50%;
     }
   }
 }

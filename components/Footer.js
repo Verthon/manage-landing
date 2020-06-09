@@ -34,9 +34,12 @@ export default function Footer({ primaryLinks, secondaryLinks }) {
   return (
     <footer className="footer">
       <form className="footer__input-wrapper" onClick={(e) => handleSubmit(e)}>
+        <label htmlFor="email" className="visuallyhidden"></label>
         <input
           className="footer__input"
           type="email"
+          name="email"
+          id="email"
           placeholder="Updates in your inbox..."
           onChange={(e) => setEmail(e.target.value)}
         />
@@ -82,7 +85,7 @@ export default function Footer({ primaryLinks, secondaryLinks }) {
         />
       </div>
 
-      <img className="footer__logo" src="/logo-white.svg" />
+      <img className="footer__logo" src="/logo-white.svg" alt=""/>
 
       <p className="attribution">
         Challenge by{' '}
